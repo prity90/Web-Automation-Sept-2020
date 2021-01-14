@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="url" value="https://nypost.com/"/>
+  <test thread-count="5" name="Web-Automation-Sept-2020(failed)">
+    <classes>
+      <class name="news.TestNewsSection">
+        <methods>
+          <include name="setUp"/>
+          <include name="allFeatures"/>
+          <include name="cleanUp"/>
+        </methods>
+      </class> <!-- news.TestNewsSection -->
+    </classes>
+  </test> <!-- Web-Automation-Sept-2020(failed) -->
+</suite> <!-- Failed suite [Default Suite] -->

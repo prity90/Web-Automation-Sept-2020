@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name ="W3School Test Script" parallel="false">
+
+ <parameter name="url" value="https://www.w3schools.com/"></parameter>
+
+    <test name = "W3School Sql Table">
+
+        <classes>
+            <class name="testTableData.TestTableData"></class>
+        </classes>
+
+    </test>
+
+</suite>
