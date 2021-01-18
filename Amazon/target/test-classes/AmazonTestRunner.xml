@@ -3,7 +3,7 @@
 
 <suite name ="Amazon Test Script" parallel="false">
 
- <parameter name="url" value="http://amazon.com"></parameter>
+ <parameter name="url" value="https://amazon.com"></parameter>
 
     <test name = "Amazon Home">
 

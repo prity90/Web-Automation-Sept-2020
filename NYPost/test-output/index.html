@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_Suite" class="navigator-link">
-              <span class="suite-name border-failed">Default Suite</span>
+              <span class="suite-name border-passed">Default Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_Suite" class="hide-methods failed suite-Default_Suite"> (hide)</a> <!-- hide-methods failed suite-Default_Suite -->
-                      <a href="#" panel-name="suite-Default_Suite" class="show-methods failed suite-Default_Suite"> (show)</a> <!-- show-methods failed suite-Default_Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Default_Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_Suite" title="news.TestNewsSection" class="method navigator-link" hash-for-method="allFeatures">allFeatures</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Default_Suite -->
+                    <span class="method-stats">0 methods,   </span>
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -119,34 +105,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_Suite" class="panel Default_Suite">
-          <div class="suite-Default_Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">news.TestNewsSection</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="allFeatures">
-                  </a> <!-- allFeatures -->
-                  <span class="method-name">allFeatures</span>
-                  <div class="stack-trace">java.io.FileNotFoundException: null\data\nyp-test-steps.xls (The system cannot find the path specified)
-	at java.base/java.io.FileInputStream.open0(Native Method)
-	at java.base/java.io.FileInputStream.open(FileInputStream.java:212)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:154)
-	at datasources.ConnectToExcelFile.fileReader2(ConnectToExcelFile.java:47)
-	at datafetch.FetchTheSteps.getDataFromExcelFile(FetchTheSteps.java:12)
-	at features.AllFunctionality.runAllTheFeatureTest(AllFunctionality.java:53)
-	at news.TestNewsSection.allFeatures(TestNewsSection.java:15)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
-... Removed 24 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_Suite-class-failed -->
         </div> <!-- panel Default_Suite -->
         <div panel-name="test-xml-Default_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -160,7 +118,12 @@
   &lt;parameter name=&quot;url&quot; value=&quot;https://nypost.com/&quot;/&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Web-Automation-Sept-2020&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;news.TestNewsSection&quot;/&gt;
+      &lt;class name=&quot;base.CommonAPI&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;setUp&quot;/&gt;
+          &lt;include name=&quot;cleanUp&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- base.CommonAPI --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Web-Automation-Sept-2020 --&gt;
 &lt;/suite&gt; &lt;!-- Default Suite --&gt;
@@ -200,16 +163,12 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
-data.setCell(0, 0, 0)
-data.setCell(0, 1, 'allFeatures')
-data.setCell(0, 2, 'news.TestNewsSection')
-data.setCell(0, 3, 8);
+data.addRows(0);
 window.suiteTableData['Default_Suite']= { tableData: data, tableDiv: 'times-div-Default_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 ms</span>
+              <span class="suite-total-time">Total running time: 0 ms</span>
               <div id="times-div-Default_Suite">
               </div> <!-- times-div-Default_Suite -->
             </div> <!-- times-div -->
@@ -234,22 +193,6 @@ return data;
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="chronological-class">
-              <div class="chronological-class-name">news.TestNewsSection</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp(https://nypost.com/)</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">allFeatures</span>
-                <span class="method-start">18812 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">cleanUp</span>
-                <span class="method-start">18826 ms</span>
-              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
